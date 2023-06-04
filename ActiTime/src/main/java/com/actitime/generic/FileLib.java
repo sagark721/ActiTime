@@ -9,7 +9,8 @@ import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
-public class FileLib {
+
+public class FileLib  {
 
 	public String readPropertyData(String key) throws IOException {
 		FileInputStream fis= new FileInputStream("src/test/resources/data/actitimedata1.property");
