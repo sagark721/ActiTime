@@ -30,7 +30,7 @@ public class CustomerModule extends BaseClass {
 		
 		tp.setNewCustBtn();
 		
-		String custName = f.readExcelData("Customer", 9, 0);
+		String custName = f.readExcelData("Customer", 7, 0);
 		tp.setCustNameTxb(custName);
 		
 		String desc = f.readExcelData("Customer", 1, 1);
