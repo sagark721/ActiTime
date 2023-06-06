@@ -30,7 +30,10 @@ public class CustomerModule extends BaseClass {
 		
 		tp.setNewCustBtn();
 		
-		String custName = f.readExcelData("Customer", 7, 0);
+		
+		String custName = f.readExcelData("Customer", 9, 0)+Math.random();
+		System.out.println("CustName Name: "+custName);
+		
 		tp.setCustNameTxb(custName);
 		
 		String desc = f.readExcelData("Customer", 1, 1);
@@ -41,9 +44,9 @@ public class CustomerModule extends BaseClass {
 		
 		tp.setCreateCustBtn();
 		
+
 		String actName=tp.getActCustName();
-		
-		//Assert.assertEquals(custName, actName);
+		Assert.assertEquals(actName, custName);
 		
 	}
 }

@@ -5,7 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class TaskPage {
+import com.actitime.generic.BaseClass;
+import com.actitime.generic.WebDriverCommonLib;
+
+public class TaskPage  {
 
 	
 	
@@ -33,12 +36,17 @@ public class TaskPage {
 	@FindBy(xpath = "//div[text()='Create Customer']")
 	private WebElement createCustBtn;
 	
-	@FindBy(xpath = "//div[@class='titleEditButtonContainer']/div[1]")
+	@FindBy(xpath = "//div[@class='taskManagementHeaderPanel hasSelectedCustomer']//div[@class='title']")
 	private WebElement actCustName;
 	
 	
+	
+	WebDriverCommonLib w=new WebDriverCommonLib();
+	
 	public String getActCustName() {
-		return actCustName.getText();
+		
+		w.waitUntilVisibilityOf(actCustName);
+		return actCustName.getAttribute("title");
 	}
 
 
