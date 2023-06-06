@@ -45,6 +45,7 @@ public class CustomerModule extends BaseClass {
 		
 
 		String actName=tp.getActCustName();
+		
 		Assert.assertEquals(actName, custName);
 		
 	}
