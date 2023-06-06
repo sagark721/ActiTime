@@ -25,7 +25,6 @@ public class CustomerModule extends BaseClass {
 		
 		hp.setTaskTab();
 		
-		
 		tp.setAddNewBtn();
 		
 		tp.setNewCustBtn();
